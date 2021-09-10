@@ -23,12 +23,16 @@ cfg = _C
 # ---------------------------------- Model options ----------------------------------- #
 _C.NUM_GPUS = 1
 
+_C.LEARN_RATE = 0.002
+_C.MOMENTUM = 0.99
+_C.MAX_EPOCH = 20
+
 _C.DATA_LOADER = CfgNode()
-_C.DATA_LOADER.NUM_WORKERS = 1
+_C.DATA_LOADER.NUM_WORKERS = 0
 _C.DATA_LOADER.TRAIN_BATCH = 4
 _C.DATA_LOADER.TEST_BATCH = 4
 
-_C.OUT_DIR = './'
+_C.OUT_DIR = './output'
 _C.DATA_DIR = './'
 
 # ---------------------------------- Default config ---------------------------------- #
